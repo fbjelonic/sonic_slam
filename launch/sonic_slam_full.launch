@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find hector_slam)/hector_slam_launch/launch/tutorial.launch"/>
+	<node pkg="sonic_slam" type="sonic_slam" name="sonic_slam"/>
+	<node pkg="rosserial_python" type="serial_node.py" name="rosserial_python" args="/dev/ttyUSB0" />
+</launch> 
